@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" href="https://www.creative-tim.com">Paper Kit 2 Angular</a>
+      <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="sidebarToggle()">
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Conectar en Linkedin" data-placement="bottom"
+            href="https://www.linkedin.com/in/victor-romero-virs/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            <p class="d-lg-none">Linkedin</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Revisar GitHub" data-placement="bottom"
+            href="https://github.com/RomeroSz" target="_blank">
+            <i class="fa fa-github"></i>
+            <p class="d-lg-none">GitHub</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Conocer celular" data-placement="bottom">
+            <i class="fa fa-phone"></i>
+            <p class="d-lg-none">Teléfono</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Enviar correo electrónico" data-placement="bottom">
+            <i class="fa fa-google-plus"></i>
+            <p class="d-lg-none">Gmail</p>
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="isHome()">
+          <a target="_blank" class="btn btn-danger btn-round">Descargar el Cv</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

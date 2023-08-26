@@ -1,0 +1,55 @@
+/*!
+
+ =========================================================
+ * Paper Kit 2 Angular - v1.5.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/paper-kit-2-angular
+ * Copyright 2020 Creative Tim (https://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/timcreative/paper-kit/blob/master/LICENSE.md)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
+
+ @import "portfolio/variables";
+ @import "portfolio/mixins";
+
+ @import "portfolio/typography";
+
+ // Core CSS
+ @import "portfolio/misc";
+ @import "portfolio/buttons";
+ @import "portfolio/inputs";
+ @import "portfolio/progress-bars";
+ @import "portfolio/sliders";
+ @import "portfolio/alerts";
+ @import "portfolio/labels";
+ @import "portfolio/tooltips-and-popovers";
+ @import "portfolio/sections";
+ @import "portfolio/checkbox-radio";
+ @import "portfolio/navbars";
+ @import "portfolio/images";
+ @import "portfolio/cards";
+ @import "portfolio/footers";
+
+
+ // Bootstrap Switch
+ @import "portfolio/bootstrap-switch";
+
+ // Fancy Stuff
+ @import "portfolio/dropdown";
+ //
+ // icons
+ @import "portfolio/icons";
+ //
+ @import "portfolio/tabs-navs-pagination";
+ @import "portfolio/collapse";
+ @import "portfolio/carousel";
+ @import "portfolio/modal";
+ //
+ @import "portfolio/responsive";
+ @import "portfolio/plugins/datetimepicker";
+ @import "portfolio/social-buttons";
+ @import "portfolio/examples";
