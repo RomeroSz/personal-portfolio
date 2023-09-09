@@ -72,6 +72,7 @@
 .btn-info    { @include btn-styles($info-color, $info-states-color); }
 .btn-warning { @include btn-styles($warning-color, $warning-states-color); }
 .btn-danger  { @include btn-styles($danger-color, $danger-states-color); }
+.btn-main  { @include btn-styles($main-color, $main-states-color); }
 .btn-neutral  { @include btn-styles($white-color, $default-states-color); }
 
 .btn-outline-default { @include btn-outline-styles($default-color, $default-states-color); }

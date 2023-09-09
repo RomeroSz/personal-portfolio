@@ -1,16 +1,17 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { DownloadcvService } from 'app/core/services/downloadcv.service';
 
 @Component({
-  selector: 'app-main-nav',
-  templateUrl: './main-nav.component.html',
-  styleUrls: ['./main-nav.component.scss']
+    selector: 'app-main-nav',
+    templateUrl: './main-nav.component.html',
+    styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent implements OnInit {
-  private toggleButton: any;
+    private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(public location: Location, private element : ElementRef) {
+    constructor(public location: Location, private element: ElementRef, public downloadCVS: DownloadcvService) {
         this.sidebarVisible = false;
     }
 
@@ -18,13 +19,16 @@ export class MainNavComponent implements OnInit {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     }
+    downloadCV() {
+        this.downloadCVS.downloadCV()
+    }
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const html = document.getElementsByTagName('html')[0];
         // console.log(html);
         // console.log(toggleButton, 'toggle');
 
-        setTimeout(function(){
+        setTimeout(function () {
             toggleButton.classList.add('toggled');
         }, 500);
         html.classList.add('nav-open');
@@ -48,11 +52,11 @@ export class MainNavComponent implements OnInit {
         }
     };
     isHome() {
-      var titlee = this.location.prepareExternalUrl(this.location.path());
-      if(titlee.charAt(0) === '#'){
-          titlee = titlee.slice( 1 );
-      }
-        if( titlee === '/home' ) {
+        var titlee = this.location.prepareExternalUrl(this.location.path());
+        if (titlee.charAt(0) === '#') {
+            titlee = titlee.slice(1);
+        }
+        if (titlee === '/home') {
             return true;
         }
         else {
@@ -60,11 +64,11 @@ export class MainNavComponent implements OnInit {
         }
     }
     isDocumentation() {
-      var titlee = this.location.prepareExternalUrl(this.location.path());
-      if(titlee.charAt(0) === '#'){
-          titlee = titlee.slice( 1 );
-      }
-        if( titlee === '/documentation' ) {
+        var titlee = this.location.prepareExternalUrl(this.location.path());
+        if (titlee.charAt(0) === '#') {
+            titlee = titlee.slice(1);
+        }
+        if (titlee === '/documentation') {
             return true;
         }
         else {

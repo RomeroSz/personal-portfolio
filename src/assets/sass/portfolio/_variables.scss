@@ -29,7 +29,7 @@ $dark-gray:                  #9A9A9A !default;
 $placeholder-gray:           rgba(210, 210, 210, 1)  !default;
 
 $gray-input-bg:              #fffcf5 !default;
-$danger-input-bg:            #FFC0A4 !default;
+$danger-input-bg:            #990909b4 !default;
 $success-input-bg:           #ABF3CB !default;
 $other-medium-gray:          #A49E93 !default;
 $transparent-bg:             transparent !default;
@@ -50,8 +50,14 @@ $info-states-color:          darken($info-color, 10%) !default;
 $warning-color:              #fbc658 !default;
 $warning-states-color:       darken($warning-color, 10%) !default;
 
-$danger-color:               #0F1C33 !default;
+$danger-color:               #0d1e3b !default;
 $danger-states-color:        darken($danger-color, 8%) !default;
+
+$main-color:                #0d1e3b !default;
+$main-states-color:          darken($danger-color, 8%) !default;
+
+$red-color:                  #750707 !default;
+$red-states-color:           darken($danger-color, 8%) !default;
 
 $link-disabled-color:        #666666 !default;
 
@@ -238,7 +244,7 @@ $filter-blue:         darken($primary-color, 10%);
 $filter-azure:        darken($info-color, 10%);
 $filter-green:        darken($success-color, 10%);
 $filter-orange:       darken($warning-color, 10%);
-$filter-red:          darken($danger-color, 10%);
+$filter-red:          darken($danger-color, 20%);
 
 
 $topbar-x:             topbar-x !default;
