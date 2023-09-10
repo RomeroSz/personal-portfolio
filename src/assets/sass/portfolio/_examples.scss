@@ -339,3 +339,18 @@
     font-size: 5em;
   }
 }
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgb(103 102 102 / 35%);
+  border-left-color: #efefef;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

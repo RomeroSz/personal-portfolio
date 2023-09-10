@@ -61,8 +61,8 @@
               </ng-container>
             </div>
             <div class="row">
-              <div class="col-md-4 mr-auto ml-auto base-display-center">
-                <button type="submit" class="btn btn-main btn-lg btn-fill">Enviar</button>
+              <div class="col-md-4 mr-auto ml-auto">
+                <button type="submit" class="btn btn-main btn-lg btn-fill base-display-center gap-15">Enviar<div *ngIf="emailLoading" class="spinner"></div></button>
               </div>
             </div>
           </form>
