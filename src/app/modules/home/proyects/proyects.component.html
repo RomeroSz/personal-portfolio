@@ -1,0 +1,32 @@
+<div class="section">
+    <div class="container">
+      <div class="col-md-8">
+        <h2 class="title">Proyectos de muestra</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8 mr-auto ml-auto">
+          <div class="card page-carousel">
+            <ngb-carousel>
+              <ng-template ngbSlide *ngFor="let project of proyectsCards">
+                <img [src]="project.image" alt="Random slide">
+                <div class="carousel-caption">
+                  <p>{{ project.name }}</p>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="justify-content: center">
+        <div class="col-xs-8 col-sm-6 col-md-3" *ngFor="let project of proyectsCards">
+          <img [src]="project.image" class="img-rounded img-responsive" alt="Rounded Image">
+          <div class="img-details">
+            <div class="author">
+              <img [src]="project.authorImage" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+            </div>
+            <p>{{ project.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

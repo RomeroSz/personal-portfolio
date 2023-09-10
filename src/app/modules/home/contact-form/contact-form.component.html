@@ -1,0 +1,73 @@
+<div class="section landing-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mr-auto ml-auto">
+          <h2 class="text-center">Sigamos en contacto</h2>
+          <form [formGroup]="contactForm" (ngSubmit)="contactFormSubmit()" class="contact-form">
+
+            <div class="row">
+              <div class="col-md-6">
+                <label>Nombre</label>
+                <div class="input-group"
+                  [ngClass]="{'input-group-focus': focus === true, 'form-group': (contactForm.get('name')?.valid || contactForm.get('name')?.invalid), 'has-success': (contactForm.get('name')?.valid && contactForm.get('name')?.touched), 'has-danger': (contactForm.get('name')?.invalid && contactForm.get('name')?.touched)}">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+                  </div>
+                  <input formControlName="name" type="text" class="form-control"
+                    [ngClass]="{'form-control-success': (contactForm.get('name')?.valid && contactForm.get('name')?.touched), 'form-control-danger': (contactForm.get('name')?.invalid && contactForm.get('name')?.touched)}"
+                    [id]="contactForm.get('name')?.valid ? 'inputSuccess1' : 'inputDanger1'" placeholder="Nombre"
+                    (focus)="focus = true" (blur)="focus = false">
+
+                  <ng-container *ngFor="let formValidation of formControlGenericValdtns.generic">
+                    <ng-container
+                      *ngIf="contactForm.get('name')?.hasError(formValidation.type) && contactForm.get('name')?.touched">
+                      <div class="form-control-feedback">{{ formValidation.message }}</div>
+                    </ng-container>
+                  </ng-container>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label>Correo</label>
+                <div class="input-group"
+                  [ngClass]="{'input-group-focus': focus1 === true, 'form-group': (contactForm.get('email')?.valid || contactForm.get('email')?.invalid), 'has-success': (contactForm.get('email')?.valid && contactForm.get('email')?.touched), 'has-danger': (contactForm.get('email')?.invalid && contactForm.get('email')?.touched)}">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="nc-icon nc-email-85"></i></span>
+                  </div>
+                  <input formControlName="email" type="text" class="form-control"
+                    [ngClass]="{'form-control-success': (contactForm.get('email')?.valid && contactForm.get('email')?.touched), 'form-control-danger': (contactForm.get('email')?.invalid && contactForm.get('email')?.touched)}"
+                    [id]="contactForm.get('email')?.valid ? 'inputSuccess1' : 'inputDanger1'"
+                    placeholder="Correo electrónico" (focus)="focus1 = true" (blur)="focus1 = false">
+                  <ng-container *ngFor="let formValidation of formControlGenericValdtns.generic">
+                    <ng-container
+                      *ngIf="contactForm.get('email')?.hasError(formValidation.type) && contactForm.get('email')?.touched">
+                      <div class="form-control-feedback">{{ formValidation.message }}</div>
+                    </ng-container>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+            <label>Mensaje</label>
+            <div class="d-flex flex-column"
+              [ngClass]="{'form-group': (contactForm.get('message')?.valid || contactForm.get('message')?.invalid), 'has-success': (contactForm.get('message')?.valid && contactForm.get('message')?.touched), 'has-danger': (contactForm.get('message')?.invalid && contactForm.get('message')?.touched)}">
+              <textarea formControlName="message" class="form-control"
+                [ngClass]="{'form-control-success': (contactForm.get('message')?.valid && contactForm.get('message')?.touched), 'form-control-danger': (contactForm.get('message')?.invalid && contactForm.get('message')?.touched)}"
+                [id]="contactForm.get('message')?.valid ? 'inputSuccess1' : 'inputDanger1'" rows="4"
+                placeholder="Mensaje del correo"></textarea>
+              <ng-container *ngFor="let formValidation of formControlGenericValdtns.generic">
+                <ng-container
+                  *ngIf="contactForm.get('message')?.hasError(formValidation.type) && contactForm.get('message')?.touched">
+                  <div class="form-control-feedback">{{ formValidation.message }}</div>
+                </ng-container>
+              </ng-container>
+            </div>
+            <div class="row">
+              <div class="col-md-4 mr-auto ml-auto base-display-center">
+                <button type="submit" class="btn btn-main btn-lg btn-fill">Enviar</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>

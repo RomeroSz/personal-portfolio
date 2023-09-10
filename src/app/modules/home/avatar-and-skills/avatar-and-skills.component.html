@@ -1,0 +1,39 @@
+<div class="section profile-content p-0 main-photo-transparent">
+    <div class="container">
+        <div class="owner">
+            <div class="avatar">
+                <img src="./assets/img/faces/victor-photo-main.jpg" alt="Circle Image"
+                    class="img-circle img-no-padding img-responsive">
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+<div class="section text-center pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mr-auto ml-auto">
+                <h2 class="title m-0 mb-4">Sobre mi</h2>
+                <h5 class="description">Como desarrollador de software, he trabajado para distintas empresas durante mi
+                    trayectoria laboral. Poseo una gran capacidad de análisis de la información, respaldado tanto por mi
+                    experiencia laboral como por mis estudios universitarios.<br><br> Me considero un autodidacta
+                    apasionado por la tecnología, siempre dispuesto a asumir nuevos retos y colaborar en equipo para
+                    lograr los objetivos de la empresa junto a mi compromiso con la calidad y la excelencia.</h5>
+            </div>
+        </div>
+        <br /><br />
+        <div class="row" style="justify-content: center">
+            <div class="col-md-3" *ngFor="let card of skillsCards">
+                <div class="info">
+                    <div class="icon icon-danger">
+                        <i [class]="card.icon"></i>
+                    </div>
+                    <div class="description">
+                        <h4 class="info-title">{{ card.title }}</h4>
+                        <p class="description">{{ card.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

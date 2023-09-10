@@ -587,7 +587,7 @@
 }
 
 .navigation-example {
-  background-image: url('../../img/backgrounds/altumcode-dMUt0X3f59Q-unsplash.jpg');
+  background-image: url('../../img/backgrounds/altumcode-dMUt0X3f59Q-unsplash_original.jpg');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -1176,6 +1176,7 @@
   }
   .rotating-card .back {
       visibility: hidden;
+      transition: all 0.2s cubic-bezier(.92, .01, .83, .67);
       -ms-transition: all 0.2s cubic-bezier(.92, .01, .83, .67);
   }
   .rotating-card .front {
@@ -1260,10 +1261,6 @@ pre.prettyprint {
   border-radius: 6px 6px 0 0;
   overflow: hidden;
   box-shadow: 0 -3px 8px rgba(0, 0, 0, 0);
-}
-
-.presentation .section-images .card-image .image {
-  /*     border-radius: 6px; */
 }
 
 @media (max-width: 1200px) {
