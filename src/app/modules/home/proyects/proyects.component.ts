@@ -10,10 +10,18 @@ import { ProyectI } from 'app/core/models/proyectI';
 export class ProyectsComponent implements OnInit {
 
   public proyectsCards: ProyectI[] = ProyectsData
+  public isMobile!: boolean;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.checkScreenWidth();
+    window.addEventListener('resize', () => {
+      this.checkScreenWidth();
+    });
   }
 
+  checkScreenWidth() {
+    this.isMobile = window.innerWidth < 960;
+  }
 }

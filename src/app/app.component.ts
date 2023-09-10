@@ -27,19 +27,15 @@ export class AppComponent implements OnInit {
     });
     this.renderer.listen('window', 'scroll', (event) => {
       const number = window.scrollY;
-      console.log('number', number)
       if (number > 125 || window.pageYOffset > 125) {
-        // add logic
         navbar.classList.remove('navbar-transparent');
       } else {
-        // remove logic
         navbar.classList.add('navbar-transparent');
       }
     });
     var ua = window.navigator.userAgent;
     var trident = ua.indexOf('Trident/');
     if (trident > 0) {
-      // IE 11 => return version number
       var rv = ua.indexOf('rv:');
       var version = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
     }

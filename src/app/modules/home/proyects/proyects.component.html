@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="row" style="justify-content: center">
+      <div class="row" style="justify-content: center" *ngIf="!isMobile" >
         <div class="col-xs-8 col-sm-6 col-md-3" *ngFor="let project of proyectsCards">
           <img [src]="project.image" class="img-rounded img-responsive" alt="Rounded Image">
           <div class="img-details">

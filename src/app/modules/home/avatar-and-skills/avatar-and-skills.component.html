@@ -23,17 +23,17 @@
         </div>
         <br /><br />
         <div class="row" style="justify-content: center">
-            <div class="col-md-3" *ngFor="let card of skillsCards">
-                <div class="info">
-                    <div class="icon icon-danger">
-                        <i [class]="card.icon"></i>
-                    </div>
-                    <div class="description">
-                        <h4 class="info-title">{{ card.title }}</h4>
-                        <p class="description">{{ card.description }}</p>
-                    </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let card of skillsCards">
+              <div class="info">
+                <div class="icon icon-danger">
+                  <i [class]="card.icon"></i>
                 </div>
+                <div class="description">
+                  <h4 class="info-title">{{ card.title }}</h4>
+                  <p class="description">{{ card.description }}</p>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
 </div>
